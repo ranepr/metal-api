@@ -18,8 +18,27 @@
       status_code: 200
     register: devices
     
-  - name: printdevices
-    ansible.builtin.debug: 
-      var: devices
+  - name: save the json as variable
+    set_fact: 
+      jsondata: "{{ result.stdout | from_json }}"
+  
+  - name: devicenames
+    set_fact: 
+      devicenames: "{{ jsondata | json_query(jmesquery) }}"
+    vars:
+      jmesquery: '*.devices[*].hostname'
+   
+    - name: deviceid
+    set_fact: 
+      deviceid: "{{ jsondata | json_query(jmesquery) }}"
+    vars:
+      jmesquery: *.devices[*].id'
+     
+    - name: print the list
+    debug:
+      msg: " "{{ item1 }}" = "{{ item2 }}" "
+      with_items:
+      - "{{ devicenames }}"
+      - "{{ deviceid }}"
 
 
