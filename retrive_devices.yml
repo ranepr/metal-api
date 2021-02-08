@@ -31,6 +31,6 @@
   - name: print devicenames
     debug:
       msg: "{{ item }}"
-      with_items:
-      - "{{ devicenames }}"
+    with_items:
+    - "{{ devicenames }}"
 
