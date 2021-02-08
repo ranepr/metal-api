@@ -11,7 +11,7 @@
       validate_certs: no
       headers:
         X-Auth-Token: "{{ api_key }}"
-      body: "{{ lookup('file','issue.json') }}"
+      body: "{{ lookup('file','server-code.json') }}"
       status_code: 201
     register: create_devices
     
