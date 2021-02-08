@@ -1,6 +1,6 @@
 # metal-api
 
-This reporsitory consits API calls collection that can be integrated with Anisble AWX or Tower to execute some of the most common Equinix Metal configurations.
+This reporsitory consits API calls collection that can be integrated with Ansible AWX or Tower to execute some of the most common Equinix Metal configurations.
 
 1. Retrive devices in project
 2. Create new Metal server with networking
