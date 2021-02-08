@@ -28,13 +28,13 @@
     vars:
       jmesquery: '*.devices[*].hostname'
    
-    - name: deviceid
+  - name: deviceid
     set_fact: 
       deviceid: "{{ jsondata | json_query(jmesquery) }}"
     vars:
       jmesquery: *.devices[*].id'
      
-    - name: print the list
+  - name: print the list
     debug:
       msg: " "{{ item1 }}" = "{{ item2 }}" "
       with_items:
