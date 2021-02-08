@@ -17,15 +17,14 @@
         "billing_cycle": "hourly"
         "hostname": "pramod-api"
         "operating_system": "ubuntu_20_04"
-        "public_ipv4_subnet_size": "2"
-        "private_ipv4_subnet_size": "2"
+        "ip_addresses":
+          "address_family": "4"
+          "public": true
+          "cidr": "31"
         "ip_addresses":
           "address_family": "4"
           "public": false
           "cidr": "31"
-   #       "address_family": "4"
-   #       "public": false
-   #       "cidr": "31"
       status_code: 201
     register: create_devices
     
