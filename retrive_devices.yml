@@ -32,7 +32,7 @@
     set_fact: 
       deviceid: "{{ jsondata | json_query(jmesquery) }}"
     vars:
-      jmesquery: *.devices[*].id'
+      jmesquery: '*.devices[*].id'
      
   - name: print the list
     debug:
