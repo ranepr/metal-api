@@ -3,11 +3,12 @@
   gather_facts: no
 
   tasks:
-  - name: Login to a form based webpage using a list of tuples
+  - name: listdevices
     uri:
       url: https://api.equinix.com/metal/v1/projects/a2508413-620f-41e5-9caa-42b5fb000edd/devices
       method: GET
-      body_format: json
+      #body_format: json
+      validate_certs: no
       headers:
         X-Auth-Token: "{{ api_key }}"
       #body:
