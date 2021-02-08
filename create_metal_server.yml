@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: listdevices
+    uri:
+      url: https://api.equinix.com/metal/v1/projects/a2508413-620f-41e5-9caa-42b5fb000edd/devices
+      method: POST
+      body_format: json
+      validate_certs: no
+      headers:
+        X-Auth-Token: "{{ api_key }}"
+      body:
+        "facility": "sg1"
+        "plan": "c3.medium.x86"
+        "billing_cycle": "hourly"
+        "hostname": "pramod-api"
+        "operating_system": "ubuntu_20_04"
+        "ip_addresses":
+	         "address_family": "4"
+	         "public": true
+	         "cidr": "31"
+	         "address_family": "4"
+	         "public": false
+	         "cidr": "31"
+      status_code: 201
+    register: create_devices
+    
+  - name: printdevices
+    ansible.builtin.debug: 
+      var: create_devices
+      
+     
