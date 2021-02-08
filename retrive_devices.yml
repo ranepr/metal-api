@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Login to a form based webpage using a list of tuples
+    uri:
+      url: https://api.equinix.com/metal/v1/projects/a2508413-620f-41e5-9caa-42b5fb000edd/devices
+      method: GET
+      body_format: json
+      headers:
+        X-Auth-Token: "{{ api_key }}"
+      #body:
+      #- [ name, your_username ]
+      #- [ password, your_password ]
+      #- [ enter, Sign in ]
+      status_code: 200
+    register: devices
+  - debug: 
+    var: devices
+
+
