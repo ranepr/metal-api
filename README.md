@@ -8,3 +8,6 @@ This reporsitory consits API calls collection that can be integrated with Ansibl
 4. Create a new Metal fabric Connection (Shared Port)
 5. List Metal org fabric connections
 6. List Metal connection port's virtual circuits
+
+Ansible AWX is an open source community project, sponsored by Red Hat, that enables users to better control their Ansible Project use in IT infrastructure.
+Anisble AWX is the upstream project from which the Red Hat Ansible Tower offering is utltimately derived.
