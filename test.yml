@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Login to a form based webpage using a list of tuples
+    uri:
+      url: https://your.form.based.auth.example.com/index.php
+      method: POST
+      body_format: form-urlencoded
+      body:
+      - [ name, your_username ]
+      - [ password, your_password ]
+      - [ enter, Sign in ]
+      status_code: 302
+    register: login
+
+
