@@ -20,7 +20,7 @@
     
   - name: save the json as variable
     set_fact: 
-      jsondata: "{{ result.stdout | from_json }}"
+      jsondata: "{{ devices.stdout | from_json }}"
   
   - name: devicenames
     set_fact: 
