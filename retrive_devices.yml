@@ -16,7 +16,9 @@
       #- [ enter, Sign in ]
       status_code: 200
     register: devices
-  - debug: 
-    var: devices
+    
+  - name: printdevices
+    ansible.builtin.debug: 
+      var: devices
 
 
