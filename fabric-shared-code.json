@@ -1,0 +1,13 @@
+{
+    "name": "Pramod-Metal2NEW-Ansible",
+    "description": "Shared Fabric connection",
+    "facility": "sg1",
+    "type": "shared",
+    "redundancy": "primary",
+    "contact_email": "prane@ap.equinix.com",
+    "project": "a2508413-620f-41e5-9caa-42b5fb000edd",
+    "speed": "50000000",
+    "tags": [
+        "string"
+    ]
+}
