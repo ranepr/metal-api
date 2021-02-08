@@ -18,13 +18,13 @@
       status_code: 200
     register: devices
     
-  - name: save the json as variable
-    set_fact: 
-      jsondata: "{{ devices.stdout | from_json }}"
+  #- name: save the json as variable
+  #  set_fact: 
+  #    jsondata: "{{ devices.stdout | from_json }}"
   
   - name: devicenames
     set_fact: 
-      devicenames: "{{ jsondata | json_query(jmesquery) }}"
+      devicenames: "{{ devices | json_query(jmesquery) }}"
     vars:
       jmesquery: '*.devices[*].[hostname, id]'
       
