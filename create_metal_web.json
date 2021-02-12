@@ -1,0 +1,20 @@
+{
+    "facility": "{{ facility }}",
+    "plan": "{{ plan }}",
+    "billing_cycle": "hourly",
+    "hostname": "{{ hostname }}",
+    "operating_system": "ubuntu_20_04",
+    "ip_addresses": [
+        { 
+            "address_family": 4, 
+            "public": true,
+            "cidr": "31"
+            },
+           { 
+            "address_family": 4, 
+            "public": false,
+             "cidr": "31"
+             }
+        ] 
+
+}
