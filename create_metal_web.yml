@@ -11,6 +11,7 @@
       validate_certs: no
       headers:
         X-Auth-Token: "{{ api_key }}"
+      body_format: json
       body: |
       {
           "facility": "{{ facility }}",
